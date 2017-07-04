@@ -1,15 +1,10 @@
 # setup script for Orange Pi
-apt update
 
-apt upgrade -y
-
-echo ""
+cd
 
 apt install python-pip -y
 
-pip install Flask
-
-cd && git clone https://github.com/chtien18/consin_gateway.git
+pip install Flask Flask-bootstrap
 
 cd consin_gateway
 
