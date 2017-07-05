@@ -27,6 +27,7 @@
 </div>
 {% endblock %}
 
-<div class="footnote">
-        <p>2017 (c)Cosin</p>
-</div>
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment() }}
+{% endblock %}

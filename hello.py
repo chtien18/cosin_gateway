@@ -3,9 +3,11 @@ import atexit
 import os
 import json
 from flask_bootstrap import Bootstrap
+from flask_moment import Moment
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
+moment = Moment(app)
 
 
 # When running this app on the local machine, default the port to 8080
@@ -15,7 +17,7 @@ port = int(os.getenv('PORT', 8080))
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html',)
 @app.route('/run')
 def run():
     return 'run'
